@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://econbrief.pages.dev/sitemap.xml
+Sitemap: https://jiyuan5879.github.io/econbrief-site/sitemap.xml
