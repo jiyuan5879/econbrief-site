@@ -6,7 +6,6 @@
   const format = (value) => `$${value.toFixed(1)}B`;
 
   document.title = `${company.name} (${company.ticker}) | EconBrief Company Hub`;
-  document.querySelector(".topbar-status").innerHTML = `<i></i>Filing data · ${company.sourceDate}`;
   document.querySelector(".report-stamp strong").textContent = company.fiscalPeriod;
   document.querySelector(".report-stamp small").textContent = company.period;
   document.querySelector("#service-share").textContent = `${company.serviceShare.toFixed(1)}%`;

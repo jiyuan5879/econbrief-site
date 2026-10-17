@@ -3,35 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080e17" />
+  <meta name="theme-color" content="#080d19" />
   <meta name="description" content="An evidence led Apple company hub with durable business signals, cited research, and a transparent scenario model." />
   <title>Apple Inc. (AAPL) | EconBrief Company Hub</title>
   <link rel="icon" type="image/png" href="../assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/platform.css" />
   <link rel="stylesheet" href="company-hub.css" />
 </head>
 <body class="company-page" data-company="apple">
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="../index.html" aria-label="EconBrief home">
-        <span class="brand-mark" aria-hidden="true">E</span>
-        <span class="brand-name">ECONBRIEF<small>COMPANY RESEARCH</small></span>
+  <header class="global-header">
+    <div class="global-header-inner">
+      <a class="global-brand" href="../index.html" aria-label="EconBrief home">
+        <img src="../assets/logo.png" alt="EconBrief logo" />
+        <span class="global-brand-copy"><strong>ECONBRIEF</strong><small>INDEPENDENT RESEARCH</small></span>
       </a>
-      <nav class="main-nav" aria-label="Company hub">
-        <a href="#overview">Overview</a>
-        <a href="#signals">Signals</a>
-        <a href="#research">Research</a>
-        <a href="#lab">Data lab</a>
+      <button class="global-nav-toggle" type="button" aria-expanded="false" aria-controls="global-navigation">Menu</button>
+      <nav class="global-nav" id="global-navigation" data-open="false" aria-label="Primary navigation">
+        <a href="../index.html">Overview / About</a>
+        <a href="index.html" aria-current="page">Companies</a>
+        <a href="../industries.html">Industries</a>
+        <a href="../macro.html">Macro</a>
       </nav>
-      <span class="topbar-status"><i></i>Filing data · 31 Jul 2026</span>
     </div>
   </header>
 
   <main class="page-wrap">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../index.html">EconBrief</a><span>/</span><a href="../index.html#companies">Companies</a><span>/</span><span aria-current="page">Apple Inc.</span>
+      <a href="../index.html">EconBrief</a><span>/</span><a href="index.html">Companies</a><span>/</span><span aria-current="page">Apple Inc.</span>
+    </nav>
+    <nav class="company-local-nav" aria-label="Apple research sections">
+      <a href="#overview">Overview</a><a href="#signals">Signals</a><a href="#research">Research Notes</a><a href="#lab">Data Lab</a>
     </nav>
 
     <section class="overview-section" id="overview" aria-labelledby="company-title">
@@ -163,5 +167,6 @@
   </main>
   <script src="company-data.js"></script>
   <script src="company-hub.js"></script>
+  <script src="../assets/platform.js"></script>
 </body>
 </html>

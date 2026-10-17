@@ -5,193 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EconBrief | Independent Financial Research</title>
   <meta name="description" content="EconBrief is an independent publication covering macro trends, markets, industries, and company research with clarity, structure, and restraint." />
-  <meta name="theme-color" content="#0a2342" />
+  <meta name="theme-color" content="#080d19" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/platform.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="EconBrief Home">
-        <img src="assets/logo.png" alt="EconBrief logo" class="brand-logo" />
-        <div>
-          <div class="brand-name">EconBrief</div>
-          <div class="brand-tag">Independent Financial Research</div>
-        </div>
+<body class="platform-body">
+  <header class="global-header">
+    <div class="global-header-inner">
+      <a class="global-brand" href="index.html" aria-label="EconBrief home">
+        <img src="assets/logo.png" alt="EconBrief logo" />
+        <span class="global-brand-copy"><strong>ECONBRIEF</strong><small>INDEPENDENT RESEARCH</small></span>
       </a>
-      <nav>
-        <a href="companies/apple.html">Companies</a>
-        <a href="#editorial">Editorial</a>
-        <a href="#insights">Insights</a>
-        <a href="#sections">Coverage</a>
-        <a href="#about">About</a>
+      <button class="global-nav-toggle" type="button" aria-expanded="false" aria-controls="global-navigation">Menu</button>
+      <nav class="global-nav" id="global-navigation" data-open="false" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Overview / About</a>
+        <a href="companies/index.html">Companies</a>
+        <a href="industries.html">Industries</a>
+        <a href="macro.html">Macro</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero refined-hero">
-      <div class="container hero-shell">
-        <div class="hero-topline">
-          <span class="micro-label">Established 2026</span>
-          <span class="divider"></span>
-          <span class="micro-label gold-text">Public Research Journal</span>
-        </div>
-
-        <div class="hero-grid refined">
-          <div class="hero-copy refined-copy">
-            <p class="eyebrow">Independent financial writing, without institutional clutter</p>
-            <h1>Serious analysis.<br/>Clean expression.</h1>
-            <p class="hero-text large">
-              EconBrief is a minimalist research publication covering macro, markets, industries,
-              and companies — written for readers who want structured thinking rather than noise.
-            </p>
-            <div class="hero-actions">
-              <a class="btn gold" href="#insights">Enter the Journal</a>
-              <a class="btn btn-secondary" href="#about">Read the mandate</a>
-            </div>
-          </div>
-
-          <aside class="hero-panel refined-panel">
-            <div class="panel-label">Current orientation</div>
-            <div class="stat-row"><span>Format</span><strong>Essays · Notes · Reports</strong></div>
-            <div class="stat-row"><span>Style</span><strong>Concise, analytical, legible</strong></div>
-            <div class="stat-row"><span>Focus</span><strong>Macro · Markets · Industry · Companies</strong></div>
-            <div class="stat-row"><span>Positioning</span><strong>Independent, public-facing, long-term</strong></div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section editorial-strip" id="editorial">
-      <div class="container editorial-grid">
-        <div class="editorial-card lead">
-          <p class="eyebrow accent">Editorial standard</p>
-          <h2>Built for clarity, not volume.</h2>
-          <p>
-            The ambition behind EconBrief is modest but serious: take complicated financial questions,
-            strip away unnecessary jargon, and make the reasoning visible.
-          </p>
-        </div>
-        <div class="editorial-card quote-card">
-          <p class="quote-mark">“</p>
-          <p class="quote-text">A good research site should feel deliberate, not crowded.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="insights">
-      <div class="section-head split refined-head">
+  <main class="platform-main">
+    <section class="platform-hero" aria-labelledby="about-title">
+      <div class="platform-hero-grid">
         <div>
-          <p class="eyebrow accent">Selected writing</p>
-          <h2>Recent Insights</h2>
+          <p class="platform-kicker">Independent research platform · Overview</p>
+          <h1 id="about-title">Find the signal beneath the headline.</h1>
+          <p class="platform-lead">EconBrief is a lightweight investment-research workspace: less emotional noise, more financial-statement fundamentals, exploratory data analysis, and an algorithmic point of view.</p>
+          <div class="platform-actions">
+            <a class="platform-button primary" href="companies/index.html">Explore company research <span aria-hidden="true">→</span></a>
+            <a class="platform-button" href="#platform-map">Explore the platform</a>
+          </div>
         </div>
-        <p class="section-note">Three placeholder pieces now. A full archive can grow underneath the same editorial system.</p>
+        <aside class="glass-panel hero-console" aria-label="EconBrief research approach">
+          <h2>Research principles</h2>
+          <div class="console-row"><span class="console-index">01</span><div><strong>Financial statements first</strong><span>Anchor views in reported evidence.</span></div></div>
+          <div class="console-row"><span class="console-index">02</span><div><strong>Explore the data</strong><span>Use EDA to surface patterns and exceptions.</span></div></div>
+          <div class="console-row"><span class="console-index">03</span><div><strong>Make the model visible</strong><span>Use rules and scenarios as lenses, not promises.</span></div></div>
+        </aside>
       </div>
+    </section>
 
-      <div class="posts-grid refined-posts">
-        <article class="post-card featured premium-card">
-          <div class="post-topline">
-            <span class="tag">Feature</span>
-            <span class="meta-inline">Macro</span>
-          </div>
-          <h3><a href="posts/policy-cycle.html">How Policy Shifts Reprice Risk Appetite</a></h3>
-          <p>An opening framework for thinking about liquidity, earnings expectations, and valuation across changing policy regimes.</p>
-          <div class="meta">April 11, 2026</div>
-        </article>
-
-        <article class="post-card premium-card">
-          <div class="post-topline">
-            <span class="tag">Markets</span>
-            <span class="meta-inline">Commentary</span>
-          </div>
-          <h3><a href="posts/tech-valuations.html">How Long Can Expensive Tech Keep Working?</a></h3>
-          <p>What matters when narrative strength begins to outrun the underlying economics.</p>
-          <div class="meta">April 11, 2026</div>
-        </article>
-
-        <article class="post-card premium-card">
-          <div class="post-topline">
-            <span class="tag">Industry</span>
-            <span class="meta-inline">Research Note</span>
-          </div>
-          <h3><a href="posts/energy-chain.html">Profit Shifts Across the Energy Value Chain</a></h3>
-          <p>A compact way to think about pricing power, margins, and the movement of profit pools.</p>
-          <div class="meta">April 11, 2026</div>
+    <section class="platform-section" id="platform-map" aria-labelledby="platform-map-title">
+      <div class="platform-section-heading">
+        <div><p class="platform-kicker">Platform map</p><h2 id="platform-map-title">One research system. Four clear entry points.</h2></div>
+        <p>Move from company fundamentals to industry structure and the macro forces shaping earnings.</p>
+      </div>
+      <div class="bento-grid">
+        <a class="bento-card featured" href="companies/index.html">
+          <span class="card-index">01 / COMPANY HUB</span>
+          <h3>Start with the business beneath the ticker.</h3>
+          <p>Company pages combine operating signals, source-linked research notes, segment economics, and transparent scenario checks. Apple is the first live sample.</p>
+          <span class="card-link">Open Companies <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="bento-card secondary" href="industries.html">
+          <span class="card-index">02 / INDUSTRY INTELLIGENCE</span>
+          <h3>Follow the profit pool.</h3>
+          <p>Compare value chains, competitive positions, pricing power, and where margins accrue across an industry.</p>
+          <span class="card-link">Explore Industries <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="bento-card third" href="macro.html">
+          <span class="card-index">03 / MACRO SCOPE</span>
+          <h3>Connect liquidity to earnings.</h3>
+          <p>Track liquidity, inflation, policy transmission, and their pathways into company results and valuation.</p>
+          <span class="card-link">Explore Macro <span aria-hidden="true">→</span></span>
+        </a>
+        <article class="bento-card fourth">
+          <span class="card-index">04 / RESEARCH METHOD</span>
+          <h3>Structured, cited, and open to revision.</h3>
+          <p>Every dashboard is designed to distinguish reported fact, interpretation, and scenario assumptions. Sources stay close to the claims they support.</p>
+          <div class="bento-metric"><strong>Evidence</strong><span>→ interpretation → scenario</span></div>
         </article>
       </div>
     </section>
 
-    <section class="section section-dark" id="sections">
-      <div class="container">
-        <div class="section-head split refined-head">
-          <div>
-            <p class="eyebrow accent">Coverage map</p>
-            <h2>Core Areas</h2>
-          </div>
-          <p class="section-note light">The structure is intentionally narrow and disciplined.</p>
-        </div>
-
-        <div class="topics-grid refined-topics">
-          <div class="topic-card topic-premium"><span class="topic-index">01</span><h3>Macro</h3><p>Rates, liquidity, inflation, policy transmission, and the shape of the cycle.</p></div>
-          <div class="topic-card topic-premium"><span class="topic-index">02</span><h3>Markets</h3><p>Cross-asset signals, regime shifts, positioning, and valuation discipline.</p></div>
-          <div class="topic-card topic-premium"><span class="topic-index">03</span><h3>Industry</h3><p>Competitive structure, margin dynamics, and long-cycle sector developments.</p></div>
-          <div class="topic-card topic-premium"><span class="topic-index">04</span><h3>Companies</h3><p>Business quality, earnings durability, incentives, and mispricing opportunities.</p></div>
-          <div class="topic-card topic-premium"><span class="topic-index">05</span><h3>Reports</h3><p>Longer, more complete pieces that sit between essays and formal research papers.</p></div>
-          <div class="topic-card topic-premium"><span class="topic-index">06</span><h3>Notes</h3><p>Shorter fragments for emerging views, quick charts, and interim updates.</p></div>
-        </div>
+    <section class="platform-section" aria-labelledby="method-title">
+      <div class="platform-section-heading">
+        <div><p class="platform-kicker">How to use EconBrief</p><h2 id="method-title">A practical reading sequence.</h2></div>
+      </div>
+      <div class="method-grid">
+        <article class="method-card"><span class="card-index">01 · ORIENT</span><h3>Choose a level</h3><p>Start with a company, an industry, or the macro environment relevant to the question.</p></article>
+        <article class="method-card"><span class="card-index">02 · VERIFY</span><h3>Read the evidence</h3><p>Check period labels, primary sources, and operating measures before drawing conclusions.</p></article>
+        <article class="method-card"><span class="card-index">03 · TEST</span><h3>Stress the interpretation</h3><p>Use scenarios and watchlists to identify what would strengthen or weaken the thesis.</p></article>
       </div>
     </section>
 
-    <section class="section container" id="about">
-      <div class="section-head split refined-head">
-        <div>
-          <p class="eyebrow accent">Mandate</p>
-          <h2>About EconBrief</h2>
-        </div>
-      </div>
-
-      <div class="about-grid refined-about">
-        <div class="about-box premium-card">
-          <p>
-            EconBrief is intended to function like a compact independent journal: public-facing,
-            sober in tone, and structured enough to build a durable archive over time.
-          </p>
-          <p>
-            It is not trying to mimic institutional research. It is trying to be more readable than that,
-            while remaining more rigorous than fast-moving online commentary.
-          </p>
-        </div>
-        <div class="about-box highlight-box premium-card">
-          <h3>Disclaimer</h3>
-          <p>
-            Material published here reflects personal analysis only and is intended for research,
-            reading, and discussion. It should not be interpreted as investment advice.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-accent">
-      <div class="container cta-box refined-cta">
-        <div>
-          <p class="eyebrow accent-dark">Next stage</p>
-          <h2>Ready for publication.</h2>
-          <p>The front page is now designed to look finished even before your real archive is migrated in.</p>
-        </div>
-        <a class="btn gold" href="#insights">Review the front page</a>
+    <section class="platform-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div><p class="platform-kicker">Contact &amp; partnership</p><h2 id="contact-title">Build a more useful research conversation.</h2><p>For research collaboration, data ideas, or editorial inquiries.</p></div>
+        <a class="contact-email" href="mailto:partnerships@econbrief.com">partnerships@econbrief.com <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 EconBrief</p>
-      <p>Independent Financial Research</p>
-    </div>
-  </footer>
+  <footer class="platform-footer"><div class="platform-main platform-footer-inner"><span>© 2026 EconBrief · Independent research, not investment advice</span><nav class="platform-footer-nav" aria-label="Footer navigation"><a href="companies/index.html">Companies</a><a href="industries.html">Industries</a><a href="macro.html">Macro</a><a href="#contact">Contact</a></nav></div></footer>
+  <script src="assets/platform.js"></script>
 </body>
 </html>

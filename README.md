@@ -6,17 +6,20 @@ The site is a lightweight static site. Company hubs combine business profiles, d
 
 ## Structure
 
-- `index.html` — homepage
+- `index.html` — Overview / About landing page and platform directory
 - `styles.css` — site-wide styling
-- `assets/` — logo and static assets
+- `assets/` — logo, shared platform styling (`platform.css`), and responsive navigation (`platform.js`)
 - `posts/` — article pages
+- `companies/index.html` — company research library; Apple is the first live sample
 - `companies/` — company research hubs; `companies/apple.html` is the first MVP
+- `industries.html` — industry intelligence entry and analysis framework
+- `macro.html` — macro scope entry and transmission framework
 - `robots.txt` — search engine crawling rules
 - `sitemap.xml` — sitemap for indexing
 
 ## Company research hub MVP
 
-The Apple hub is a static, data driven prototype. Its content lives in `companies/company-data.js`, rendering and the revenue scenario calculator live in `companies/company-hub.js`, and its styles live in `companies/company-hub.css`. To add another company, add a profile under its ID in `companyProfiles` and reuse the page template with that ID. Apple figures are sourced from its Q3 FY 2026 SEC filing, filed 31 July 2026. The dashboard updates on a filing cycle, not in real time; no live market data provider is connected.
+The site uses a shared four-part navigation: Overview / About, Companies, Industries, and Macro. The shared responsive shell is in `assets/platform.css` and `assets/platform.js`. The Apple hub is a static, data driven prototype. Its content lives in `companies/company-data.js`, rendering and the revenue scenario calculator live in `companies/company-hub.js`, and its styles live in `companies/company-hub.css`. To add another company, add a profile under its ID in `companyProfiles` and reuse the page template with that ID. Apple figures are sourced from its Q3 FY 2026 SEC filing, filed 31 July 2026. The dashboard updates on a filing cycle, not in real time; no live market data provider is connected.
 
 ## Design direction
 
