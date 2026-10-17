@@ -37,6 +37,10 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+section[id] {
+  scroll-margin-top: 100px;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -551,6 +555,10 @@ h3 {
 }
 
 @media (max-width: 960px) {
+  section[id] {
+    scroll-margin-top: 150px;
+  }
+
   .hero-grid,
   .posts-grid,
   .topics-grid,

@@ -1,8 +1,8 @@
 # EconBrief
 
-EconBrief is a clean, public-facing website for independent financial writing.
+EconBrief is a public research workspace for company focused financial analysis.
 
-It was designed as a lightweight editorial site for research notes, market commentary, industry analysis, and longer-form reports. The current version is a static site, which keeps it fast, easy to deploy, and simple to maintain.
+The site is a lightweight static site. Company hubs combine business profiles, durable operating signals, cited research notes, and transparent scenario analysis. There is no build step or paid data feed.
 
 ## Structure
 
@@ -10,12 +10,17 @@ It was designed as a lightweight editorial site for research notes, market comme
 - `styles.css` — site-wide styling
 - `assets/` — logo and static assets
 - `posts/` — article pages
+- `companies/` — company research hubs; `companies/apple.html` is the first MVP
 - `robots.txt` — search engine crawling rules
 - `sitemap.xml` — sitemap for indexing
 
+## Company research hub MVP
+
+The Apple hub is a static, data driven prototype. Its content lives in `companies/company-data.js`, rendering and the revenue scenario calculator live in `companies/company-hub.js`, and its styles live in `companies/company-hub.css`. To add another company, add a profile under its ID in `companyProfiles` and reuse the page template with that ID. Apple figures are sourced from its Q3 FY 2026 SEC filing, filed 31 July 2026. The dashboard updates on a filing cycle, not in real time; no live market data provider is connected.
+
 ## Design direction
 
-The site uses a restrained visual system built around deep navy, white, and gold accents. The goal is to feel clear, professional, and editorial rather than flashy.
+The site uses a restrained visual system built around deep navy, cream, and gold accents. The goal is to make financial information clear, professional, and easy to scan.
 
 ## Deployment
 
