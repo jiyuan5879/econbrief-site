@@ -195,6 +195,21 @@ body.platform-body {
 .company-local-nav a:hover { border-color: rgba(233,219,184,.3); color: #efe4c7; }
 .section-placeholder { display: flex; flex-direction: column; justify-content: space-between; }
 .section-placeholder .card-index { margin-bottom: 26px; }
+.coverage-roadmap { grid-column: span 5; }
+.coverage-list { display: grid; gap: 0; margin: 17px 0 0; padding: 0; list-style: none; }
+.coverage-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid rgba(195,202,219,.12); }
+.coverage-list li strong { color: #e9e4d9; font-size: 16px; }
+.coverage-list li span { color: #aeb6c4; font-size: 12px; }
+.comparison-table-wrap { overflow-x: auto; border: 1px solid var(--platform-edge); border-radius: 14px; background: rgba(17,21,32,.76); box-shadow: 0 1px 0 rgba(222,232,247,.1), 0 3px 0 rgba(4,7,17,.72), 0 15px 32px rgba(0,0,0,.32), inset 0 1px rgba(236,243,255,.08); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
+.comparison-table { width: 100%; min-width: 760px; border-collapse: collapse; text-align: left; }
+.comparison-table th,.comparison-table td { padding: 15px 17px; border-bottom: 1px solid rgba(195,202,219,.12); vertical-align: top; }
+.comparison-table thead th { color: #eadcb9; font-size: 14px; font-weight: 700; }
+.comparison-table tbody th { width: 150px; color: #e9e3d5; font-size: 14px; font-weight: 600; }
+.comparison-table td { color: #b6bfcc; font-size: 14px; }
+.comparison-table tbody tr:last-child th,.comparison-table tbody tr:last-child td { border-bottom: 0; }
+.scan-state { display: inline-block; margin-top: 14px; color: #d6c79f; font-size: 12px; font-weight: 600; }
+.macro-scan-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.macro-scan-grid .method-card { min-height: 205px; }
 @media (max-width: 860px) {
   .global-header-inner { min-height: 68px; gap: 12px; }
   .global-nav-toggle { display: inline-flex; align-items: center; gap: 8px; }
@@ -203,7 +218,7 @@ body.platform-body {
   .global-nav a { min-height: 45px; }
   .platform-hero-grid { grid-template-columns: 1fr; }
   .hero-console { max-width: none; }
-  .bento-card.featured,.bento-card.secondary,.bento-card.third,.bento-card.fourth,.library-card { grid-column: span 6; }
+  .bento-card.featured,.bento-card.secondary,.bento-card.third,.bento-card.fourth,.library-card,.coverage-roadmap { grid-column: span 6; }
 }
 @media (max-width: 600px) {
   .global-header-inner,.platform-main { width: calc(100% - 30px); }
@@ -215,9 +230,11 @@ body.platform-body {
   .platform-lead { font-size: 17px; }
   .platform-section { padding: 30px 0 52px; }
   .platform-section-heading { align-items: flex-start; flex-direction: column; gap: 9px; }
-  .bento-card.featured,.bento-card.secondary,.bento-card.third,.bento-card.fourth,.library-card { grid-column: 1 / -1; min-height: 215px; }
+  .bento-card.featured,.bento-card.secondary,.bento-card.third,.bento-card.fourth,.library-card,.coverage-roadmap { grid-column: 1 / -1; min-height: 215px; }
   .bento-card.featured { min-height: 260px; }
   .method-grid { grid-template-columns: 1fr; }
+  .macro-scan-grid { grid-template-columns: 1fr; }
+  .comparison-table th,.comparison-table td { padding: 12px; }
   .contact-panel { align-items: flex-start; flex-direction: column; padding: 21px; }
   .platform-footer-inner { flex-direction: column; }
   .local-page-nav { padding-left: 15px; padding-right: 15px; }
