@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b2340" />
+  <meta name="theme-color" content="#080e17" />
   <meta name="description" content="An evidence led Apple company hub with durable business signals, cited research, and a transparent scenario model." />
   <title>Apple Inc. (AAPL) | EconBrief Company Hub</title>
   <link rel="icon" type="image/png" href="../assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="company-hub.css" />
 </head>
 <body class="company-page" data-company="apple">
@@ -36,10 +36,18 @@
 
     <section class="overview-section" id="overview" aria-labelledby="company-title">
       <div class="overview-heading">
-        <div>
-          <p class="eyebrow">Company intelligence <span class="ticker">NASDAQ · AAPL</span></p>
-          <h1 id="company-title">Apple Inc.</h1>
-          <p class="company-description">A global consumer technology platform spanning devices, software, and services.</p>
+        <div class="company-identity">
+          <span class="apple-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="presentation">
+              <path d="M31.8 9.1c1.7-2 2.1-4.4 1.9-6.1-2.4.2-5.1 1.7-6.7 3.6-1.5 1.7-2.3 4.1-2 6.2 2.5.2 5.1-1.3 6.8-3.7Z" />
+              <path d="M39.2 25.1c0-6.1 5-9 5.2-9.1-2.8-4.1-7.1-4.7-8.6-4.8-3.7-.4-7.2 2.2-9.1 2.2-1.9 0-4.8-2.1-7.9-2-4.1.1-7.9 2.4-10 6.1-4.3 7.4-1.1 18.3 3.1 24.3 2.1 2.9 4.5 6.2 7.7 6.1 3.1-.1 4.3-2 8-2s4.8 2 8 1.9c3.3-.1 5.3-3 7.3-6 2.3-3.4 3.2-6.7 3.3-6.9-.1 0-7-2.7-7-9.8Z" transform="translate(-4 -2) scale(.94)" />
+            </svg>
+          </span>
+          <div class="identity-copy">
+            <p class="eyebrow">Company intelligence <span class="ticker">NASDAQ: AAPL</span></p>
+            <h1 id="company-title">Apple Inc.</h1>
+            <p class="company-description">A global consumer technology platform spanning devices, software, and services.</p>
+          </div>
         </div>
         <div class="report-stamp"><span>Latest financial period</span><strong>FY 2026 · Q3</strong><small>Quarter ended 27 June 2026</small></div>
       </div>
@@ -47,7 +55,18 @@
       <div class="overview-grid">
         <article class="profile-card">
           <div class="profile-topline"><span class="profile-symbol" aria-hidden="true">A</span><span class="profile-label">Business profile</span></div>
-          <p>Apple designs and sells iPhone, Mac, iPad, wearables, and related services. Its investment case rests on an integrated product ecosystem, customer retention, recurring service revenue, and disciplined capital returns.</p>
+          <p class="profile-intro">Apple connects devices, software, and services in an integrated ecosystem. Explore its major business lines and their latest reported sales mix.</p>
+          <section class="business-preview" aria-labelledby="business-preview-title">
+            <div class="business-preview-heading"><div><span class="profile-kicker">Operating ecosystem</span><h2 id="business-preview-title">Business architecture</h2></div><span class="preview-hint">Select a business line</span></div>
+            <div class="business-tiles" role="group" aria-label="Apple business lines">
+              <button class="business-tile is-active" type="button" data-business="iPhone" aria-pressed="true"><span class="tile-index">01</span><strong>iPhone</strong><span class="tile-caption">Core device</span></button>
+              <button class="business-tile" type="button" data-business="Mac" aria-pressed="false"><span class="tile-index">02</span><strong>Mac</strong><span class="tile-caption">Personal computing</span></button>
+              <button class="business-tile" type="button" data-business="iPad" aria-pressed="false"><span class="tile-index">03</span><strong>iPad</strong><span class="tile-caption">Tablet platform</span></button>
+              <button class="business-tile" type="button" data-business="Services" aria-pressed="false"><span class="tile-index">04</span><strong>Services</strong><span class="tile-caption">Recurring layer</span></button>
+              <button class="business-tile" type="button" data-business="Wearables and accessories" aria-pressed="false"><span class="tile-index">05</span><strong>Wearables</strong><span class="tile-caption">Accessories &amp; home</span></button>
+            </div>
+            <div class="business-detail" aria-live="polite" aria-atomic="true"><span class="business-detail-label">Nine-month reported revenue</span><strong id="business-revenue">—</strong><span id="business-growth">—</span></div>
+          </section>
           <div class="profile-facts">
             <div><span>Headquarters</span><strong>Cupertino, California</strong></div>
             <div><span>Fiscal year end</span><strong>September</strong></div>

@@ -11,6 +11,32 @@
   document.querySelector(".report-stamp small").textContent = company.period;
   document.querySelector("#service-share").textContent = `${company.serviceShare.toFixed(1)}%`;
 
+  const businessButtons = [...document.querySelectorAll(".business-tile")];
+  const businessRevenue = document.querySelector("#business-revenue");
+  const businessGrowth = document.querySelector("#business-growth");
+  const businessDetails = {
+    iPhone: "Largest hardware revenue engine",
+    Mac: "Personal computing and productivity",
+    iPad: "Tablet devices and accessories",
+    Services: "Recurring digital and platform services",
+    "Wearables and accessories": "Wearables, home and accessories"
+  };
+
+  function selectBusiness(button) {
+    const business = company.revenueCategories.find((item) => item.label === button.dataset.business);
+    if (!business) return;
+    businessButtons.forEach((item) => {
+      const isActive = item === button;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+    businessRevenue.textContent = format(business.current);
+    businessGrowth.textContent = `${business.growth} year over year · ${businessDetails[business.label]}`;
+  }
+
+  businessButtons.forEach((button) => button.addEventListener("click", () => selectBusiness(button)));
+  if (businessButtons.length) selectBusiness(businessButtons[0]);
+
   const metricGrid = document.querySelector("#signal-grid");
   metricGrid.innerHTML = company.metrics.map((metric) => `
     <article class="signal-card">
@@ -60,7 +86,8 @@
   const researchGrid = document.querySelector("#research-grid");
   researchGrid.innerHTML = company.research.map((item) => `
     <article class="research-card">
-      <div class="research-topline"><span>${item.number} / ${item.theme}</span><span class="stance">${item.stance}</span></div>
+      <div class="research-topline"><span class="note-tag tag-${item.categoryKey}">[${item.category}]</span><span class="stance">${item.stance}</span></div>
+      <p class="research-theme">${item.number} / ${item.theme}</p>
       <h3>${item.title}</h3>
       <p>${item.summary}</p>
       <div class="citations">${item.sources.map((source, index) => `<a href="${source.url}" target="_blank" rel="noopener noreferrer">[${index + 1}] ${source.label} ↗</a>`).join("")}</div>

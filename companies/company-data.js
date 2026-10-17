@@ -43,6 +43,8 @@ window.companyProfiles = {
       {
         number: "01",
         theme: "Earnings quality",
+        category: "MARGIN",
+        categoryKey: "margin",
         title: "Services: attractive margins, with platform exposure",
         stance: "Balanced view",
         summary: "The Services business brought in $91.7B over nine months, up 14%, and delivered a 76.3% gross margin. The SEC filing also describes litigation and regulation that could change App Store distribution and fees. The durable question is whether service economics hold as platform rules evolve.",
@@ -54,6 +56,8 @@ window.companyProfiles = {
       {
         number: "02",
         theme: "Regional demand",
+        category: "GROWTH",
+        categoryKey: "growth",
         title: "Greater China growth accelerated; check what drove it",
         stance: "Read through carefully",
         summary: "Greater China sales were $64.8B for the first nine months, up 30% from the comparable period. Management attributes the increase primarily to higher iPhone sales and notes a favorable currency effect. Follow the next filing to see whether demand persists beyond currency support and launch timing.",
@@ -65,6 +69,8 @@ window.companyProfiles = {
       {
         number: "03",
         theme: "Investment and margins",
+        category: "RISK",
+        categoryKey: "risk",
         title: "AI spend meets component and compute constraints",
         stance: "Watch the trade off",
         summary: "Apple reported $34.0B of research and development spending over nine months, up 33%, and cited higher infrastructure costs including AI investment. Its filing warns that component constraints and rising computing costs could pressure revenue and margins. The release reports a 50.1% quarterly gross margin, including about two percentage points from tariff refunds. Separately, Yahoo Finance reported Morgan Stanley kept its Overweight rating while trimming its target from $360 to $355 on 1 October, a reminder that strong reported growth does not remove valuation debate.",
@@ -72,6 +78,32 @@ window.companyProfiles = {
           { label: "SEC filing · costs and risks", url: "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm" },
           { label: "Apple results release · quarterly context", url: "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/" },
           { label: "Yahoo Finance · Morgan Stanley view", url: "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-adjusts-price-target-092350310.html" }
+        ]
+      },
+      {
+        number: "04",
+        theme: "Capital allocation",
+        category: "CAPITAL RETURN",
+        categoryKey: "capital-return",
+        title: "Buybacks are large; test the net share-count effect",
+        stance: "Track per-share impact",
+        summary: "Apple repurchased 215 million shares for $61.8B over the first nine months of FY 2026 and paid $11.7B in dividends. Weighted-average diluted shares fell from 15.05B to 14.75B year over year, suggesting repurchases more than offset share-based dilution in this period. Recheck diluted shares alongside operating earnings to separate business growth from capital-return support to EPS.",
+        sources: [
+          { label: "SEC filing · repurchases and equity", url: "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm" },
+          { label: "SEC filing · diluted shares and EPS", url: "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm" }
+        ]
+      },
+      {
+        number: "05",
+        theme: "Hardware innovation cycle",
+        category: "PRODUCT CYCLE",
+        categoryKey: "product-cycle",
+        title: "Product launches can reshape demand by quarter",
+        stance: "Watch launch timing",
+        summary: "Nine-month iPhone revenue grew 22% and Mac grew 9%, while iPad and Wearables, Home and Accessories grew 3% and 2%. Apple notes that product introductions and channel inventory timing can materially shift reported sales. Compare category growth across several quarters and product cycles before treating one period as a durable demand trend.",
+        sources: [
+          { label: "SEC filing · category revenue and launch timing", url: "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm" },
+          { label: "Apple results release · quarterly context", url: "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/" }
         ]
       }
     ]
