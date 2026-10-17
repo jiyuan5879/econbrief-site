@@ -26,14 +26,7 @@ jobs:
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            index.html
-            styles.css
-            assets/
-            posts/
-            companies/
-            robots.txt
-            sitemap.xml
+          path: .
 
   deploy:
     environment:
