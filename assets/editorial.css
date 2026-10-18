@@ -5,3 +5,11 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 /* A quiet coordinate grid connects the entry page to the analytical subject. */
 body{background-image:linear-gradient(rgba(166,194,215,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(166,194,215,.025) 1px,transparent 1px);background-size:88px 88px}
+
+/* Image art direction: cooler details, clear subjects, and quiet abstract forms. */
+.photo-entry img{filter:saturate(.8)}
+.photo-entry.main-entry img{object-position:55% 45%}
+.photo-entry:not(.main-entry) img{object-position:40% center;filter:saturate(.8) brightness(1.25)}
+.feature-image img,.catalog-image img[src*="apple-detail"],.industry-card img[src*="apple-detail"]{object-position:50% 54%}
+.catalog-image img[src*="tesla-detail"],.industry-card img[src*="tesla-detail"]{object-position:50% 55%;filter:saturate(.3)}
+.about-banner img{filter:saturate(.65) brightness(1.4)}
