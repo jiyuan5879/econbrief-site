@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="../assets/logo.png" />
   <link rel="stylesheet" href="../assets/platform.css" />
   <link rel="stylesheet" href="company-hub.css" />
-<link rel="stylesheet" href="../assets/language.css"><link rel="stylesheet" href="../assets/design-system.css"></head>
+<link rel="stylesheet" href="../assets/language.css"><link rel="stylesheet" href="../assets/design-system.css"><link rel="stylesheet" href="company-performance.css"></head>
 <body class="company-page" data-company="apple">
   <header class="global-header">
     <div class="global-header-inner">
@@ -36,23 +36,28 @@
     </nav>
 
     <section class="overview-section" id="overview" aria-labelledby="company-title">
-      <div class="overview-heading">
-        <div class="company-identity">
-          <span class="apple-mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48" role="presentation">
-              <path d="M31.8 9.1c1.7-2 2.1-4.4 1.9-6.1-2.4.2-5.1 1.7-6.7 3.6-1.5 1.7-2.3 4.1-2 6.2 2.5.2 5.1-1.3 6.8-3.7Z" />
-              <path d="M39.2 25.1c0-6.1 5-9 5.2-9.1-2.8-4.1-7.1-4.7-8.6-4.8-3.7-.4-7.2 2.2-9.1 2.2-1.9 0-4.8-2.1-7.9-2-4.1.1-7.9 2.4-10 6.1-4.3 7.4-1.1 18.3 3.1 24.3 2.1 2.9 4.5 6.2 7.7 6.1 3.1-.1 4.3-2 8-2s4.8 2 8 1.9c3.3-.1 5.3-3 7.3-6 2.3-3.4 3.2-6.7 3.3-6.9-.1 0-7-2.7-7-9.8Z" transform="translate(-4 -2) scale(.94)" />
-            </svg>
-          </span>
-          <div class="identity-copy">
-            <p class="eyebrow">Company intelligence <span class="ticker">NASDAQ: AAPL</span></p>
-            <h1 id="company-title">Apple Inc.</h1>
-            <p class="company-description">A global consumer technology platform spanning devices, software, and services.</p>
-          </div>
-        </div>
-        <div class="report-stamp"><span>Latest financial period</span><strong>FY 2026 · Q3</strong><small>Quarter ended 27 June 2026</small></div>
+      <div class="financial-hero">
+        <div class="financial-hero-copy"><p class="eyebrow">Company intelligence / NASDAQ: AAPL</p><h1 id="company-title">Apple Inc.</h1><p class="financial-industry">Consumer technology · Devices &amp; services</p><p class="company-description">A global consumer technology platform spanning devices, software, and services.</p><div class="report-stamp"><span>Latest financial period</span><strong>FY 2026 · Q3</strong><small>Nine months ended 27 June 2026</small></div></div>
+        <div class="financial-hero-image"><img src="../assets/images/apple-detail.jpg" alt="Apple logo on the silver surface of an Apple device" width="1600" height="2400" fetchpriority="high"><span>THE BUSINESS BEHIND THE BRAND</span></div>
       </div>
-
+      <section class="financial-snapshot" aria-label="Financial snapshot" id="financial-snapshot"></section>
+      <section class="performance-section" aria-labelledby="performance-title">
+        <div class="performance-heading"><div><p class="eyebrow" id="performance-kicker">Financial performance / USD</p><h2 id="performance-title">Revenue, in perspective.</h2></div><span class="performance-period">Two comparable nine-month periods</span></div>
+        <div class="performance-controls" role="group" aria-label="Choose financial metric"><button type="button" data-metric="revenue" aria-pressed="true">Revenue</button><button type="button" data-metric="netIncome" aria-pressed="false">Net income</button><button type="button" data-metric="margin" aria-pressed="false">Net profit margin</button></div>
+        <p id="performance-explanation" class="performance-explanation"></p>
+        <div id="performance-chart" class="performance-chart" role="img" aria-label="Financial performance comparison"></div>
+        <p id="performance-empty" class="performance-empty" hidden>No comparable data is available for this metric.</p>
+        <div id="performance-points" class="performance-points" role="group" aria-label="Select a reporting period to explore"></div>
+        <p class="performance-source"><span id="performance-unit"></span><a id="performance-source" target="_blank" rel="noopener noreferrer">Source: Apple Q3 FY2026 Form 10-Q ↗</a></p>
+        <section id="performance-detail" class="performance-detail" aria-labelledby="selected-period" aria-live="polite" hidden><button type="button" id="close-performance-detail" class="close-detail" aria-label="Close selected period explanation">×</button><p class="eyebrow" id="selected-period"></p><h3 id="selected-value"></h3><p id="selected-change"></p><p id="selected-explanation"></p><a id="selected-source" target="_blank" rel="noopener noreferrer">Read the underlying statement ↗</a></section>
+        <div class="performance-method">
+          <details><summary>What does this metric mean?</summary><p id="metric-definition"></p></details>
+          <details><summary>How is it calculated?</summary><p id="metric-formula"></p></details>
+          <details><summary>Data source and reporting methodology</summary><p>Both observations cover nine months through each fiscal third quarter. They are cumulative year-to-date figures, not standalone Q3 or full-year results. Revenue is summed from the existing product and services categories; net income comes from the existing cash-flow comparison. Both were checked against the consolidated statement of operations in the linked 10-Q. USD amounts are stored in billions. Margin is calculated as net income divided by revenue. Missing values are not treated as zero or interpolated. Only two periods are available; no multi-year range controls are shown.</p></details>
+        </div>
+        <noscript><p>Enable JavaScript to explore the chart. The source statement remains available in the existing research links below.</p></noscript>
+      </section>
+      <details class="legacy-overview"><summary>Explore business lines &amp; revenue mix</summary>
       <div class="overview-grid">
         <article class="profile-card">
           <div class="profile-topline"><span class="profile-symbol" aria-hidden="true">A</span><span class="profile-label">Business profile</span></div>
@@ -101,9 +106,11 @@
           <a class="source-link" href="https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm" target="_blank" rel="noopener noreferrer">Source: Apple Q3 2026 Form 10 Q, pages 1 and 15 ↗</a>
         </article>
       </div>
+      </details>
     </section>
 
-    <section class="content-section" id="signals" aria-labelledby="signals-title">
+    <details class="content-section legacy-signals" id="signals"><summary>Explore the existing operating signals &amp; breakdowns</summary>
+<div>
       <div class="section-heading">
         <div><p class="eyebrow">Quarterly operating signals</p><h2 id="signals-title">The business beneath the share price</h2></div>
         <div class="section-note"><span class="live-dot"></span>Latest filed data · Nine months ended 27 June 2026</div>
@@ -128,7 +135,7 @@
       </div>
 
       <div class="signal-takeaway"><span class="takeaway-mark" aria-hidden="true">◆</span><p><strong>Long term lens</strong><span>Track service economics, cash conversion, reinvestment, and share count once per filing. These are slower moving measures of business quality, not a substitute for valuation or risk analysis.</span></p><a href="#research">Read the evidence <span aria-hidden="true">→</span></a></div>
-    </section>
+    </div></details>
 
     <section class="content-section research-section" id="research" aria-labelledby="research-title">
       <div class="section-heading">
@@ -164,6 +171,9 @@
   </main>
   <script src="company-data.js"></script>
   <script src="company-hub.js"></script>
+  <script src="../assets/vendor/echarts-5.6.0.min.js"></script>
+  <script src="financial-adapter.js"></script>
+  <script src="company-performance.js"></script>
   <script src="../assets/platform.js"></script>
 <script src="../assets/language.js"></script></body>
 </html>
