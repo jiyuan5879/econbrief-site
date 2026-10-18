@@ -40,3 +40,21 @@ body{background-image:linear-gradient(rgba(166,194,215,.025) 1px,transparent 1px
 .industry-status{position:absolute;top:18px;left:20px;font-size:10px;color:#d4dde3;background:rgba(6,17,28,.75);padding:4px 9px}
 @media(max-width:1100px){.expanded-industries{grid-template-columns:repeat(2,minmax(0,1fr))}.expanded-industries .industry-card{height:320px}}
 @media(max-width:700px){.expanded-industries{grid-template-columns:1fr}.expanded-industries .industry-card{height:300px}.company-ticker-art{font-size:50px}.industry-total{display:inline-block;margin-left:8px;font-size:10px}}
+/* Representative editorial photography, with one restrained color treatment. */
+.company-grid .catalog-image{height:auto;aspect-ratio:16/10;background:#102131}
+.company-grid .catalog-image img{filter:saturate(.65) contrast(1.04) brightness(.92);object-fit:cover;transform:none}
+.company-grid .catalog-image img[src*="nvidia"]{object-position:50% 27%}
+.company-grid .catalog-image img[src*="microsoft"]{object-position:55% 47%}
+.company-grid .catalog-image img[src*="popmart"]{object-position:50% 52%}
+.company-grid .catalog-image img[src*="tencent"]{object-position:50% 38%}
+.company-grid .catalog-image img[src*="meta"]{object-fit:contain;background:#111;filter:saturate(.8) contrast(1.04)}
+.company-grid .catalog-image img[src*="alphabet"]{object-position:35% 50%}
+.expanded-industries .industry-card img{filter:saturate(.6) contrast(1.05) brightness(.95)}
+.expanded-industries .industry-card:after{background:linear-gradient(180deg,rgba(4,15,26,.08),rgba(4,15,26,.2) 25%,rgba(4,15,26,.94) 100%)}
+.expanded-industries .industry-card img[src*="finance"]{object-position:53% center}
+.expanded-industries .industry-card img[src*="cloud"]{object-position:25% center}
+.expanded-industries .industry-card img[src*="consumer"]{object-position:45% 65%}
+.catalog-note a{text-decoration:underline;text-underline-offset:3px}
+.company-grid .catalog-image img[src*="tencent"]{object-position:50% 78%}
+.company-grid .catalog-image>img{position:absolute;inset:0;width:100%;height:100%}
+.company-grid .catalog-image img[src*="nvidia"]{transform:scale(1.6);transform-origin:50% 18%;object-position:50% top}
