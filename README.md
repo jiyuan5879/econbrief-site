@@ -6,7 +6,10 @@ The site is a lightweight static site. Company hubs combine business profiles, d
 
 ## Structure
 
-- `index.html` — Overview / About landing page and platform directory
+- `index.html` — Chinese-language entry page with image links to the three primary sections
+- `about.html` — platform purpose, method, sources, and author
+- `assets/editorial.css` / `assets/editorial.js` — new entry and library design, mobile navigation, company search and market filters
+- `assets/images/` — locally hosted Unsplash photos and source credits
 - `styles.css` — site-wide styling
 - `assets/` — logo, shared platform styling (`platform.css`), and responsive navigation (`platform.js`)
 - `posts/` — article pages
@@ -19,11 +22,11 @@ The site is a lightweight static site. Company hubs combine business profiles, d
 
 ## Company research hub MVP
 
-The site uses a shared four-part navigation: Overview / About, Companies, Industries, and Macro. The shared responsive shell is in `assets/platform.css` and `assets/platform.js`. The Apple hub is a static, data driven prototype. Its content lives in `companies/company-data.js`, rendering and the revenue scenario calculator live in `companies/company-hub.js`, and its styles live in `companies/company-hub.css`. To add another company, add a profile under its ID in `companyProfiles` and reuse the page template with that ID. Apple figures are sourced from its Q3 FY 2026 SEC filing, filed 31 July 2026. The dashboard updates on a filing cycle, not in real time; no live market data provider is connected.
+Primary navigation is About / 公司分析 / 行业研究. The new entry, About, company library, and industry library use `assets/editorial.css` and `assets/editorial.js`. Existing detailed research pages retain their earlier styles in `assets/platform.css` and `assets/platform.js`. Macro is retained as a legacy page outside the primary navigation. The Apple hub is a static, data driven prototype. Its content lives in `companies/company-data.js`, rendering and the revenue scenario calculator live in `companies/company-hub.js`, and its styles live in `companies/company-hub.css`. To add another company, add a profile under its ID in `companyProfiles` and reuse the page template with that ID. Apple figures are sourced from its Q3 FY 2026 SEC filing, filed 31 July 2026. The dashboard updates on a filing cycle, not in real time; no live market data provider is connected.
 
 ## Design direction
 
-The site uses a restrained visual system built around deep navy, cream, and gold accents. The goal is to make financial information clear, professional, and easy to scan.
+The entry and libraries use blue-black, platinum-white and muted gold, generous spacing, a subtle grid pattern and clickable photographic cards. Planned company coverage is marked explicitly. Images are hosted locally; source URLs and license information are recorded in `assets/images/credits.md`.
 
 ## Deployment
 

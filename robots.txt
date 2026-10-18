@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://econbrief-jillian.netlify.app/sitemap.xml
+Sitemap: https://econbriefsite.netlify.app/sitemap.xml
