@@ -13,3 +13,13 @@ body{background-image:linear-gradient(rgba(166,194,215,.025) 1px,transparent 1px
 .feature-image img,.catalog-image img[src*="apple-detail"],.industry-card img[src*="apple-detail"]{object-position:50% 54%}
 .catalog-image img[src*="tesla-detail"],.industry-card img[src*="tesla-detail"]{object-position:50% 55%;filter:saturate(.3)}
 .about-banner img{filter:saturate(.65) brightness(1.4)}
+
+/* Use the original identity artwork; trim only its surrounding empty space. */
+.wordmark .brand-logo{display:block;flex:none;width:112px;height:58px;object-fit:cover;object-position:center 52%}
+.site-footer .wordmark{justify-self:start}
+.site-footer .brand-logo{width:100px;height:54px}
+.about-logo{position:absolute;top:22%;left:50%;transform:translateX(-50%);width:150px;height:110px;overflow:hidden}
+.about-logo img{width:150px;height:110px;object-fit:cover;object-position:center 52%}
+.about-identity{width:180px;height:110px;object-fit:cover;object-position:center 52%;margin-bottom:28px}
+@media(max-width:1100px){.about-logo{left:25%;top:40%;width:135px;height:95px}.about-logo img{width:135px;height:95px}}
+@media(max-width:700px){.wordmark .brand-logo{width:96px;height:50px}.about-logo{left:20%;top:44%;width:100px;height:80px}.about-logo img{width:100px;height:80px}.about-identity{width:150px;height:95px}}
