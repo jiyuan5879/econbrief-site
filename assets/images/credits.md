@@ -47,3 +47,7 @@ Downloaded 2026-10-17. Unsplash images below are used under https://unsplash.com
 ### Tencent headquarters photograph
 
 Photo by **Chainwit.**, “Tencent Seafront Towers, the Tencent HQ in Shenzhen (2026) - img 02.jpg”, Wikimedia Commons. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Original file and author](https://commons.wikimedia.org/wiki/File:Tencent_Seafront_Towers,_the_Tencent_HQ_in_Shenzhen_(2026)_-_img_02.jpg). Downloaded 1920px version; displayed with CSS cropping, reduced saturation and contrast adjustment. No endorsement implied. Local file: `tencent.jpg`.
+
+## Companies directory image variants (Step 2)
+
+The local `company-cards/*.webp` files are 960px-wide, quality-80 derivatives fetched from Unsplash's image CDN using the same source photo IDs listed above. They are used only by `/companies/`; high-resolution JPEG originals remain available as fallbacks. This adds no runtime image API dependency. Tencent retains its locally hosted 1920px CC BY 4.0 JPEG and attribution. The directory applies CSS crops, dark text-contrast scrims and reduced saturation.

@@ -1,0 +1,95 @@
+/* Companies discovery only. Shared tokens, header, footer and behavior are retained. */
+.companies-directory .page-heading{padding-top:var(--eb-space-5);padding-bottom:var(--eb-space-5)}
+.companies-directory .page-heading h1{line-height:1.25;margin-top:20px}
+.companies-directory .heading-row>p{font-size:14px;line-height:1.9;max-width:320px}
+.companies-directory .discovery-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:24px}
+.companies-directory .discovery-heading h2{font-size:24px;letter-spacing:-.025em;margin:0}
+.companies-directory .discovery-heading>p{font-size:13px;color:var(--eb-text-secondary);margin:0}
+.companies-directory .discovery-heading>p span{margin-left:14px}
+.companies-directory .discovery-toolbar{display:flex;align-items:center;gap:24px;padding:18px 0;margin-bottom:32px;border-block:1px solid var(--eb-border)}
+.companies-directory .search-field{display:flex;gap:12px;flex:1 1 320px;width:auto;max-width:470px;min-height:48px;padding:0 16px;background:var(--eb-bg-secondary);border:1px solid var(--eb-border);border-radius:var(--eb-radius)}
+.companies-directory .search-field:focus-within{border-color:var(--eb-link);outline:2px solid var(--eb-link);outline-offset:3px}
+.companies-directory .search-field svg{flex:none;color:var(--eb-text-secondary)}
+.companies-directory .search-field input{font-size:14px;min-height:46px;padding:10px 0}
+.companies-directory .search-field input:focus-visible{outline:none}
+.companies-directory .filter-row{margin:0;gap:6px;flex:none}
+.companies-directory .filter-row button{font-size:13px;padding:11px 16px;min-height:46px;background:transparent;border-color:transparent}
+.companies-directory .filter-row button:hover{background:var(--eb-bg-secondary);border-color:var(--eb-border)}
+.companies-directory .filter-row button.selected{background:var(--eb-surface);border-color:var(--eb-border-active);color:var(--eb-link)}
+.companies-directory .discovery-count{margin-left:auto;white-space:nowrap;font-size:13px;color:var(--eb-text-secondary);font-variant-numeric:tabular-nums}
+.companies-directory .discovery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 28px;align-items:stretch}
+.companies-directory .discovery-card{display:flex;flex-direction:column;min-width:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.companies-directory .discovery-image{position:relative;isolation:isolate;aspect-ratio:4/3;overflow:hidden;background:var(--eb-surface)}
+.companies-directory .discovery-image picture{position:absolute;inset:0;display:block}
+.companies-directory .discovery-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.68) contrast(1.04);transition:transform 480ms var(--eb-ease);transform:scale(1)}
+.companies-directory .discovery-image:after{position:absolute;z-index:0;inset:0;content:'';pointer-events:none;background:linear-gradient(180deg,rgba(7,17,31,.4),transparent 34%,rgba(7,17,31,.1) 45%,rgba(7,17,31,.9))}
+.companies-directory .discovery-meta{position:absolute;z-index:1;inset:18px 18px auto;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.companies-directory .discovery-status{font-size:10px;line-height:1.5;color:var(--eb-text-secondary);background:var(--eb-bg);padding:5px 8px;border:1px solid var(--eb-border)}
+.companies-directory .discovery-status.available{color:var(--eb-text);border-color:var(--eb-border-active)}
+.companies-directory .discovery-ticker{font-size:10px;letter-spacing:.04em;color:var(--eb-text);text-shadow:0 1px 4px var(--eb-bg);white-space:nowrap}
+.companies-directory .discovery-identity{position:absolute;z-index:1;bottom:22px;left:24px;right:20px}
+.companies-directory .discovery-local-name{font-size:12px;color:var(--eb-text-secondary);letter-spacing:.08em}
+.companies-directory .discovery-identity h3{font-size:clamp(26px,2.5vw,38px);font-weight:500;letter-spacing:-.035em;line-height:1.1;color:var(--eb-text);margin:7px 0 0;text-wrap:initial}
+.companies-directory .discovery-copy{padding:22px 0 0;display:flex;flex:1;flex-direction:column}
+.companies-directory .discovery-category{font-size:11px;font-weight:500;color:var(--eb-link);letter-spacing:.04em;margin:0 0 10px}
+.companies-directory .discovery-description{font-size:14px;line-height:1.85;color:var(--eb-text-secondary);margin:0 0 21px;min-height:3.7em}
+.companies-directory .discovery-question{padding:16px 0;border-top:1px solid var(--eb-border);margin-top:auto}
+.companies-directory .discovery-question>span{font-size:10px;color:var(--eb-text-secondary)}
+.companies-directory .discovery-question>p{font-size:15px;line-height:1.7;color:var(--eb-text);margin:5px 0 0}
+.companies-directory .discovery-footer{display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:12px;min-height:40px}
+.companies-directory .discovery-action{display:inline-flex;gap:12px;align-items:center;color:var(--eb-link)}
+.companies-directory .discovery-action>span{display:grid;place-items:center;width:28px;height:28px;border:1px solid var(--eb-border-active);border-radius:50%;transition:transform var(--eb-duration) var(--eb-ease),background var(--eb-duration) var(--eb-ease)}
+.companies-directory .discovery-pending,.companies-directory .discovery-market{color:var(--eb-text-secondary);font-size:11px}
+.companies-directory a.discovery-card:hover{background:transparent}
+.companies-directory a.discovery-card:focus-visible{outline:2px solid var(--eb-link);outline-offset:8px;border-radius:2px}
+.companies-directory a.discovery-card:is(:hover,:focus-visible) .discovery-action>span{background:var(--eb-surface);transform:translate(2px,-2px)}
+.companies-directory .discovery-image[data-image="apple-detail"] img{object-position:50% 52%}
+.companies-directory .discovery-image[data-image="tesla-detail"] img{object-position:50% 55%}
+.companies-directory .discovery-image[data-image="microsoft"] img{object-position:50% 45%}
+.companies-directory .discovery-image[data-image="tencent"] img{object-position:50% 78%}
+.companies-directory .discovery-image[data-image="nvidia"] img{transform:scale(1.5);transform-origin:50% 15%;object-position:50% 0}
+.companies-directory .discovery-image[data-image="meta"] img{object-fit:contain;background:#101e30}
+.companies-directory .catalog-note{margin-top:32px;max-width:850px;font-size:11px;line-height:1.9}
+.companies-directory .library-bottom{padding-top:32px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .companies-directory .discovery-card:hover .discovery-image img,.companies-directory a.discovery-card:focus-visible .discovery-image img{transform:scale(1.035)}
+ .companies-directory .discovery-card:hover .discovery-image[data-image="nvidia"] img{transform:scale(1.54)}
+}
+@media(max-width:1100px){
+ .companies-directory .discovery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
+ .companies-directory .discovery-toolbar{gap:14px}
+ .companies-directory .filter-row button{padding-inline:12px}
+ .companies-directory .discovery-heading{align-items:start}
+ .companies-directory .discovery-heading>p span{display:block;margin:5px 0 0}
+}
+@media(max-width:700px){
+ .companies-directory .page-heading{padding-top:32px;padding-bottom:32px}
+ .companies-directory .heading-row{gap:17px}
+ .companies-directory .heading-row>p{font-size:13px}
+ .companies-directory .discovery-heading{gap:14px;flex-direction:column;margin-bottom:20px}
+ .companies-directory .discovery-heading h2{font-size:22px}
+ .companies-directory .discovery-heading>p{font-size:12px}
+ .companies-directory .discovery-heading>p span{display:inline;margin-left:5px}
+ .companies-directory .discovery-toolbar{flex-wrap:wrap;gap:14px 8px;padding:16px 0;margin-bottom:24px}
+ .companies-directory .search-field{flex:1 1 100%;max-width:none}
+ .companies-directory .filter-row{gap:4px}
+ .companies-directory .filter-row button{font-size:12px;padding:10px 12px;min-height:44px}
+ .companies-directory .discovery-count{font-size:12px}
+ .companies-directory .discovery-grid{grid-template-columns:1fr;gap:32px}
+ .companies-directory .discovery-identity{left:20px;bottom:20px}
+ .companies-directory .discovery-identity h3{font-size:34px}
+ .companies-directory .discovery-meta{inset:15px 15px auto}
+ .companies-directory .discovery-copy{padding-top:18px}
+ .companies-directory .discovery-description{min-height:0;margin-bottom:18px}
+ .companies-directory .discovery-question{padding:13px 0}
+}
+@media(prefers-reduced-motion:reduce){
+ .companies-directory .discovery-image img,.companies-directory .discovery-action>span{transition:none}
+ .companies-directory a.discovery-card:is(:hover,:focus-visible) .discovery-action>span{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .companies-directory .discovery-image img,
+ .companies-directory .discovery-card:is(:hover,:focus-visible) .discovery-image img{transform:none}
+ .companies-directory .discovery-image[data-image="nvidia"] img,
+ .companies-directory .discovery-card:is(:hover,:focus-visible) .discovery-image[data-image="nvidia"] img{transform:scale(1.5)}
+}
