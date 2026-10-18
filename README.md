@@ -46,3 +46,7 @@ To publish later changes, commit them and run `git push origin main`. GitHub Act
 ## Notes
 
 This repository is intended to serve as the foundation for a long-term archive of financial analysis and research.
+
+## Language selection
+
+All pages offer 中文 / English in the header. Main entry and library pages are maintained in Chinese; existing detailed research pages retain English source content. The other language opens Google Translate's hosted website translation for the current page. This requires Google Translate access and the publicly deployed site; it does not translate localhost or local file contents. No API key or embedded legacy translation widget is used. Links remain usable without JavaScript; JavaScript preserves section/query context and updates the selected language on Google's translation proxy. Shared styling and behavior are in `assets/language.css` and `assets/language.js`.

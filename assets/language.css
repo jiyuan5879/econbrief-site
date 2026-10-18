@@ -1,0 +1,14 @@
+.language-picker{position:relative;flex:none;font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif;font-size:12px;line-height:1.5;color:#f6f5f0;letter-spacing:0}
+.language-picker summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid rgba(220,229,238,.25);background:transparent;white-space:nowrap;min-height:40px}
+.language-picker summary::-webkit-details-marker{display:none}
+.language-picker summary:hover,.language-picker[open] summary{border-color:#d9cba8;color:#d9cba8}
+.language-picker summary:focus-visible,.language-options a:focus-visible{outline:2px solid #d9cba8;outline-offset:3px}
+.language-chevron{font-size:14px;margin-left:6px}
+.language-options{position:absolute;top:calc(100% + 8px);right:0;min-width:220px;padding:8px;background:#0b1b2a;border:1px solid rgba(220,229,238,.25);box-shadow:0 12px 30px rgba(0,0,0,.25);z-index:100}
+.language-options a{display:block;padding:11px 12px;color:#f6f5f0;text-decoration:none;font-size:13px}
+.language-options a:hover,.language-options a[aria-current="true"]{background:#172d3e;color:#d9cba8}
+.language-options a[aria-current="true"]:after{content:'✓';float:right}
+.language-options small{display:block;border-top:1px solid rgba(220,229,238,.15);padding:10px 12px 4px;color:#a9b7c3;font-size:10px}
+.global-header-inner>.language-picker{margin-left:auto;order:2}.global-header-inner>.global-nav{order:1}.global-header-inner>.global-nav-toggle{order:3}
+@media(max-width:860px){.global-header-inner>.language-picker{order:1}.global-header-inner>.global-nav-toggle{order:2}}
+@media(max-width:700px){.site-nav{gap:12px}.site-nav>.wordmark{margin-right:auto}.site-nav>.language-picker{order:1}.site-nav>.menu-toggle{order:2}.language-picker summary{padding:7px 9px;gap:6px;min-height:36px}.language-chevron{margin-left:0}.language-options{min-width:210px}.global-header-inner{gap:8px}.global-header-inner .global-brand-copy small{display:none}.global-header-inner .global-brand{gap:7px}.global-header-inner .global-brand-copy strong{font-size:11px}}
