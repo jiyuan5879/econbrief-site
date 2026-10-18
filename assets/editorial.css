@@ -23,3 +23,20 @@ body{background-image:linear-gradient(rgba(166,194,215,.025) 1px,transparent 1px
 .about-identity{width:180px;height:110px;object-fit:cover;object-position:center 52%;margin-bottom:28px}
 @media(max-width:1100px){.about-logo{left:25%;top:40%;width:135px;height:95px}.about-logo img{width:135px;height:95px}}
 @media(max-width:700px){.wordmark .brand-logo{width:96px;height:50px}.about-logo{left:20%;top:44%;width:100px;height:80px}.about-logo img{width:100px;height:80px}.about-identity{width:150px;height:95px}}
+/* Expanded coverage: typographic theme images are not company logos. */
+.company-theme{isolation:isolate;background:#10283d}
+.company-theme img{filter:saturate(.5) brightness(.6);position:absolute;inset:0}
+.company-theme:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,17,28,.55),transparent);z-index:0}
+.company-ticker-art{position:absolute;z-index:1;left:25px;bottom:28px;font-size:49px;letter-spacing:-2px;color:#eeeade;font-weight:500;line-height:1}
+.company-ticker-art small{display:block;font-size:9px;font-weight:400;letter-spacing:3px;margin-top:12px;color:#cfdae3}
+.company-theme .status{z-index:2}.theme-cloud img,.theme-social img{object-position:left center}.theme-commerce img,.theme-devices img{transform:scaleX(-1)}
+.company-info h3{font-size:24px}.company-info h3>span{display:inline-block;font-size:13px}
+.industry-total{font-size:11px;font-weight:400;color:var(--platform-muted,#9daebc);margin-left:15px}
+.expanded-industries{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.expanded-industries .industry-card{height:330px;padding:22px}
+.expanded-industries .industry-card h2{font-size:25px}
+.expanded-industries .industry-card p{font-size:11px}
+.expanded-industries .industry-card .eyebrow{font-size:8px;letter-spacing:1.5px}
+.industry-status{position:absolute;top:18px;left:20px;font-size:10px;color:#d4dde3;background:rgba(6,17,28,.75);padding:4px 9px}
+@media(max-width:1100px){.expanded-industries{grid-template-columns:repeat(2,minmax(0,1fr))}.expanded-industries .industry-card{height:320px}}
+@media(max-width:700px){.expanded-industries{grid-template-columns:1fr}.expanded-industries .industry-card{height:300px}.company-ticker-art{font-size:50px}.industry-total{display:inline-block;margin-left:8px;font-size:10px}}

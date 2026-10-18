@@ -25,6 +25,7 @@
     document.querySelector('#result-count').textContent = `${count} 家公司`;
     document.querySelector('.empty-state').hidden = count !== 0;
   };
+  update();
   search.addEventListener('input', update);
   document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
     market = button.dataset.filter;
