@@ -27,9 +27,18 @@ The site uses a restrained visual system built around deep navy, cream, and gold
 
 ## Deployment
 
-This site can be deployed for free on platforms such as Cloudflare Pages or Netlify.
+The site deploys to Netlify directly from GitHub without a build step. `netlify.toml` sets the publish directory to the repository root (`.`) and leaves the build command empty.
 
-Because it is fully static, no build step is required.
+One-time setup in Netlify:
+
+1. Select **Add new project → Import an existing project → GitHub**.
+2. Authorize access to `jiyuan5879/econbrief-site` and select that repository.
+3. Set the production branch to `main`, leave the base directory and build command empty, and set the publish directory to `.`.
+4. Deploy the project. Subsequent pushes to `main` will automatically trigger production deployments.
+
+If a Netlify project already exists, link this repository in its **Project configuration → Build & deploy → Continuous deployment** settings instead of creating a second project. Ensure automatic builds are enabled.
+
+To publish later changes, commit them and run `git push origin main`. GitHub Actions and Netlify API tokens are not required for this Git integration. The existing GitHub Pages workflow is independent of Netlify.
 
 ## Notes
 
