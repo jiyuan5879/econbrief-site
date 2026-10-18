@@ -1,0 +1,210 @@
+/* EconBrief design system — loaded after legacy page styles.
+   This compatibility layer changes presentation, never layout or data geometry.
+   New work should use the eb-* tokens directly. */
+:root {
+  color-scheme: dark;
+  --eb-bg: #07111f;
+  --eb-bg-secondary: #101e30;
+  --eb-surface: #17283d;
+  --eb-text: #f7f9fc;
+  --eb-text-secondary: #a9b8c9;
+  --eb-accent: #438bff;
+  --eb-link: #85b5ff;
+  --eb-border: rgba(255, 255, 255, .12);
+  --eb-border-active: rgba(133, 181, 255, .65);
+  --eb-positive: #88d6b1;
+  --eb-negative: #ffaaa4;
+  --eb-chart-prior: #6f87a3;
+  --eb-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --eb-font-display: var(--eb-font);
+  --eb-text-sm: .8125rem;
+  --eb-text-base: 1rem;
+  --eb-title-1: clamp(2.25rem, 4.2vw, 3.75rem);
+  --eb-title-2: clamp(1.65rem, 2.7vw, 2.5rem);
+  --eb-title-3: clamp(1.2rem, 1.8vw, 1.5rem);
+  --eb-space-1: .5rem;
+  --eb-space-2: 1rem;
+  --eb-space-3: 1.5rem;
+  --eb-space-4: 2rem;
+  --eb-space-5: 3rem;
+  --eb-space-6: 4.5rem;
+  --eb-radius: 4px;
+  --eb-duration: 180ms;
+  --eb-ease: cubic-bezier(.2, .65, .3, 1);
+  /* Aliases for the existing editorial, article and company components. */
+  --ink: var(--eb-text);
+  --paper: var(--eb-bg-secondary);
+  --white: var(--eb-text);
+  --deep: var(--eb-bg);
+  --gold: var(--eb-link);
+  --muted: var(--eb-text-secondary);
+  --line: var(--eb-border);
+  --navy: var(--eb-bg);
+  --navy-soft: var(--eb-accent);
+  --cream: var(--eb-bg);
+  --green: var(--eb-positive);
+  --red: var(--eb-negative);
+  --platform-bg: var(--eb-bg);
+  --platform-panel: var(--eb-bg-secondary);
+  --platform-panel-deep: var(--eb-surface);
+  --platform-text: var(--eb-text);
+  --platform-muted: var(--eb-text-secondary);
+  --platform-gold: var(--eb-link);
+  --platform-edge: var(--eb-border);
+  --platform-metal: var(--eb-border);
+  --glass-edge: var(--eb-border);
+}
+body, body.platform-body, body.company-page {
+  background: var(--eb-bg);
+  color: var(--eb-text);
+  font-family: var(--eb-font);
+  font-size: var(--eb-text-base);
+  line-height: 1.7;
+}
+body::before { content: none; }
+body :is(h1,h2,h3,h4) {
+  font-family: var(--eb-font-display);
+  color: var(--eb-text);
+  font-weight: 600;
+  line-height: 1.3;
+  text-shadow: none;
+  text-wrap: balance;
+}
+body :is(h1,h2) { letter-spacing: -.035em; }
+body h1, body .platform-page-title, body .platform-hero h1,
+.article-page.platform-body .article h1 { font-size: var(--eb-title-1); }
+body :is(.section-heading,.platform-section-heading,.section-title,.reading-section) h2,
+body .library-bottom h2 { font-size: var(--eb-title-2); }
+body :is(.card-heading,.business-preview-heading) :is(h2,h3),
+body .research-card h3, body .scenario-copy h3, body .watch-card h3 { font-size: var(--eb-title-3); }
+body :is(p,li,label,small) { overflow-wrap: anywhere; }
+body :is(.gold,.eyebrow,.platform-kicker,.card-index,.console-index,.profile-label,.profile-kicker,.model-label,.research-theme,.watch-index,.takeaway-mark,.update-icon) { color: var(--eb-link); }
+body :is(.home-questions,.light-section) .eyebrow { color: var(--eb-link); }
+body :is(.company-description,.platform-lead,.platform-section-heading p,.company-info>p,.catalog-note,.section-note,.route-copy p,.route-note,.home-intro>p,.about-description,.industry-details p,.reading-section p,.method-items p,.question-card p,.feature-copy p,.chart-subtitle,.chart-footnote,.mix-legend>p,.preview-hint,.tile-caption,.business-detail-label,.signal-label,.signal-context,.profile-facts span,.range-label,.range-scale,.model-note,.scenario-copy>p,.watch-card li,.watch-footnote,.update-note p,.report-stamp span,.report-stamp small,.donut-label span,.cash-summary span,.cash-summary small) { color: var(--eb-text-secondary); }
+body :is(.profile-card>p,.profile-intro,.business-tile strong,.profile-facts strong,.business-detail strong,.signal-value,.donut-label strong,.cash-summary strong,.report-stamp strong,.scenario-output>strong,.range-label strong,.mix-legend>div strong,.revenue-label strong,.revenue-values strong,.cash-row>strong,.watch-card li strong,.update-note p strong,.signal-takeaway p strong) { color: var(--eb-text); text-shadow: none; }
+body :is(.mix-legend>div span,.signal-takeaway p,.revenue-values span,.chart-key,.page-footer,.page-footer span:first-child,.platform-footer,.site-footer p,.site-footer small,.breadcrumb,.breadcrumb a) { color: var(--eb-text-secondary); }
+body :is(.signal-change.up,.business-detail>span:last-child,.scenario-delta.positive,.revenue-label>span) { color: var(--eb-positive); }
+body :is(.signal-change.down,.scenario-delta.negative) { color: var(--eb-negative); }
+/* Navigation: retain each header's existing behavior and breakpoints. */
+body :is(.site-nav,.global-header,.topbar) { background: var(--eb-bg); border-color: var(--eb-border); box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+body :is(.site-nav nav,.global-nav,.main-nav) a { color: var(--eb-text-secondary); font-weight: 500; border-radius: 0; box-shadow: none; }
+body :is(.site-nav nav,.global-nav,.main-nav) a:hover,
+body :is(.site-nav nav,.global-nav,.main-nav) a[aria-current="page"] { color: var(--eb-text); background: transparent; border-color: transparent; box-shadow: none; }
+body .site-nav nav a[aria-current]::after { background: var(--eb-accent); }
+body .global-nav a[aria-current="page"] { border-bottom-color: var(--eb-accent); }
+body .global-brand img { border: 0; border-radius: 0; box-shadow: none; }
+body .global-brand-copy strong { color: var(--eb-text); }
+body .global-brand-copy small { color: var(--eb-text-secondary); }
+/* Flat surfaces replace the earlier glass and metallic finishes. */
+body :is(.company-card,.feature-story,.home-questions,.light-section,.platform-card,.glass-panel,.bento-card,.method-card,.contact-panel,.comparison-table-wrap,.profile-card,.mix-card,.chart-card,.research-card,.scenario-card,.watch-card,.signal-card,.update-note),
+.article-page.platform-body .article {
+  background: var(--eb-bg-secondary);
+  color: var(--eb-text);
+  border-color: var(--eb-border);
+  border-radius: var(--eb-radius);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body :is(.business-preview,.business-tile,.report-stamp,.cash-summary div,.scenario-output,.signal-takeaway,.source-strip,.apple-mark) {
+  background: var(--eb-surface);
+  color: var(--eb-text);
+  border-color: var(--eb-border);
+  border-radius: var(--eb-radius);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body :is(.platform-card,.glass-panel,.bento-card,.method-card,.contact-panel,.profile-card,.mix-card,.chart-card,.research-card,.scenario-card,.watch-card,.signal-card,.update-note,.business-preview,.business-tile,.report-stamp,.cash-summary div,.scenario-output,.signal-takeaway,.source-strip)::before,
+body :is(.platform-card,.glass-panel,.bento-card,.method-card,.contact-panel,.profile-card,.mix-card,.chart-card,.research-card,.scenario-card,.watch-card,.signal-card,.update-note,.business-preview,.business-tile,.report-stamp,.cash-summary div,.scenario-output,.signal-takeaway,.source-strip)::after,
+.article-page.platform-body .article::before { content: none; }
+body :is(.global-nav a,.platform-button,.global-nav-toggle,.link-row a,.source-link,.citations a,.source-strip a,.page-footer a)::after { content: none; }
+body :is(.profile-card,.mix-card,.chart-card,.research-card,.scenario-card,.watch-card,.signal-card,.platform-card,.bento-card,.method-card,.contact-panel):hover { transform: none; box-shadow: none; background: var(--eb-bg-secondary); }
+body .business-tile:is(:hover,:focus-visible,.is-active) { background: var(--eb-surface); border-color: var(--eb-accent); box-shadow: none; transform: none; }
+body :is(.ticker,.period-chip,.note-tag,.stance,.status,.library-state) { color: var(--eb-text-secondary); border-color: var(--eb-border); background: var(--eb-surface); }
+body .status.live { background: var(--eb-surface); color: var(--eb-text); }
+body .tag-growth { color: var(--eb-positive); }
+body .tag-risk { color: var(--eb-negative); }
+body :is(.tag-margin,.tag-capital-return,.tag-product-cycle) { color: var(--eb-link); }
+body :is(.content-section,.source-link,.chart-footnote,.citations,.profile-facts,.link-row,.business-detail,.card-bottom,.question-link,.anchor-nav,.reading-section,.library-bottom,.industry-details article,.home-about,.platform-section,.comparison-table th,.comparison-table td,.scenario-output,.page-footer,.platform-footer,.site-footer) { border-color: var(--eb-border); }
+body :is(.site-footer,.platform-footer) { background: var(--eb-bg); }
+body .article :is(p,li),.article-page.platform-body .article :is(p,li) { color: var(--eb-text-secondary); line-height: 1.85; }
+body .article .kicker { color: var(--eb-link); }
+body .article .article-meta { color: var(--eb-text-secondary); }
+body .article h2,.article-page.platform-body .article h2 { font-family: var(--eb-font-display); font-size: var(--eb-title-2); }
+/* Link and control treatments share the same focus and interaction vocabulary. */
+body :is(.text-link,.contact-email,.source-link,.citations a,.source-strip a,.page-footer a,.back-link,.platform-footer a,.site-footer a:not(.wordmark),.company-local-nav a,.local-page-nav a,.link-row a) { color: var(--eb-link); }
+body a { text-underline-offset: .25em; }
+body :is(.text-link,.contact-email,.source-link,.citations a,.source-strip a,.back-link):hover { color: var(--eb-text); }
+body :is(.text-link,.question-link,.photo-cta,.card-link,.card-bottom) { font-size: var(--eb-text-sm); }
+body :is(.platform-button,.btn,.global-nav-toggle,.filter-row button,.menu-toggle,.language-picker summary) { font-family: var(--eb-font); border-color: var(--eb-border); color: var(--eb-text); background: var(--eb-bg-secondary); border-radius: var(--eb-radius); box-shadow: none; }
+body :is(.platform-button.primary,.btn.gold,.filter-row button.selected) { background: var(--eb-accent); border-color: var(--eb-accent); color: var(--eb-bg); }
+body :is(.platform-button,.btn,.filter-row button,.global-nav-toggle,.language-picker summary):hover { border-color: var(--eb-border-active); box-shadow: none; transform: none; }
+body :is(input:not([type="range"]),textarea,select) { color: var(--eb-text); background: var(--eb-bg-secondary); border-color: var(--eb-border); border-radius: var(--eb-radius); font-family: var(--eb-font); }
+body .search-field { border-color: var(--eb-border-active); }
+body .search-field input { background: transparent; }
+body input::placeholder,body textarea::placeholder { color: var(--eb-text-secondary); opacity: 1; }
+body :is(a,button,input,textarea,select,summary,[tabindex]):focus-visible { outline: 2px solid var(--eb-link); outline-offset: 4px; }
+body .language-picker { font-family: var(--eb-font); color: var(--eb-text); }
+body .language-options { background: var(--eb-bg-secondary); border-color: var(--eb-border); border-radius: var(--eb-radius); box-shadow: 0 12px 24px rgba(7,17,31,.35); }
+body .language-options a { color: var(--eb-text); }
+body .language-options a:hover,body .language-options a[aria-current="true"] { background: var(--eb-surface); color: var(--eb-link); }
+body .language-options small { color: var(--eb-text-secondary); border-color: var(--eb-border); }
+body .language-picker summary:hover,body .language-picker[open] summary { color: var(--eb-link); border-color: var(--eb-border-active); }
+/* Chart colors retain categorical and positive/negative distinctions and geometry. */
+body .donut-track { stroke: var(--eb-chart-prior); }
+body .donut-value { stroke: var(--eb-accent); }
+body :is(.bar.current,.legend-gold) { background: var(--eb-accent); }
+body :is(.bar.prior,.cash-bar.prior,.legend-pale,.legend-navy) { background: var(--eb-chart-prior); }
+body .cash-bar.current { background: var(--eb-accent); }
+body .cash-bar i,body .cash-bar.prior i { color: var(--eb-bg); font-weight: 600; }
+body #services-growth { accent-color: var(--eb-accent); }
+body #services-growth::-webkit-slider-thumb { background: var(--eb-text); border-color: var(--eb-accent); box-shadow: none; }
+body #services-growth::-moz-range-thumb { background: var(--eb-text); border-color: var(--eb-accent); box-shadow: none; }
+body .home-questions .text-link:hover { color: var(--eb-text); }
+/* Photographic scrims remain: they are functional contrast overlays, not decoration. */
+body .lead-copy>p { color: var(--eb-text); }
+body .industry-card p,body .photo-copy p { color: var(--eb-text); }
+body .company-info h3>span { color: var(--eb-text-secondary); }
+/* Intrinsic-size safety without hiding overflow or changing grid structures. */
+body :is(main,section,article,aside,.company-identity,.identity-copy,.card-heading>div,.route-copy,.scenario-copy,.scenario-output) { min-width: 0; }
+body :is(.report-stamp,.scenario-output,.source-strip,.update-note) { overflow-wrap: anywhere; }
+body :is(a,button,input,summary) { transition: color var(--eb-duration) var(--eb-ease), background-color var(--eb-duration) var(--eb-ease), border-color var(--eb-duration) var(--eb-ease); }
+::selection { color: var(--eb-text); background: #245397; }
+@media(max-width:860px) {
+  body .global-nav { background: var(--eb-bg-secondary); box-shadow: none; border-color: var(--eb-border); }
+}
+@media(max-width:700px) {
+  body #primary-nav { background: var(--eb-bg-secondary); }
+  body :is(.site-nav,.global-header-inner) { gap: 8px; }
+  body .global-brand-copy { display: none; }
+  body .global-nav-toggle { padding-inline: 9px; }
+  body .page-heading h1 { font-size: clamp(2rem,8vw,2.75rem); }
+  body .home-intro h1 { font-size: clamp(1.8rem,6.5vw,2.5rem); }
+  body .company-page h1 { font-size: clamp(2rem,9vw,2.875rem); }
+  body .signal-value { white-space: normal; overflow-wrap: anywhere; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  body :is(.photo-entry,.industry-card,.company-card,.question-card,.lead-research,.route-card):hover img { transform: none; }
+}
+/* Explicit bridges for legacy rules with component-level typography. */
+body :is(.card-heading,.business-preview-heading,.section-heading,.platform-section-heading,.platform-hero) :is(h1,h2,h3),
+body :is(.platform-page-title,.bento-card h3,.method-card h3,.hero-console h2,.contact-panel h2),
+.article-page.platform-body .article :is(h1,h2,h3),
+.company-page :is(h1,h2,h3) {
+  color: var(--eb-text);
+  font-family: var(--eb-font-display);
+  font-weight: 600;
+  text-shadow: none;
+}
+.company-page :is(.profile-card,.research-card,.mix-card,.chart-card,.scenario-card,.watch-card,.signal-card,.signal-value,.main-nav,.breadcrumb,.topbar,.brand-name) { font-family: var(--eb-font); }
+body .profile-symbol { border-color: var(--eb-border-active); color: var(--eb-link); box-shadow: none; }
+body .platform-kicker::before { background: var(--eb-accent); }
+body .comparison-table thead th { color: var(--eb-text); }
+body .comparison-table tbody th { color: var(--eb-text); }
+body .comparison-table td { color: var(--eb-text-secondary); }
+body .scenario-output :is(small,span:first-child) { color: var(--eb-text-secondary); }
+body .business-detail-label { font-family: var(--eb-font); }
+body .company-local-nav a:hover,body .local-page-nav a:hover { background: var(--eb-surface); color: var(--eb-text); border-color: var(--eb-border-active); }
